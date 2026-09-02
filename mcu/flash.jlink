@@ -1,0 +1,10 @@
+// J-Link Commander Script for APM32F402
+// Usage: JLinkExe -device APM32F402xx -if SWD -speed 4000 -autoconnect 1 -CommanderScript flash.jlink
+device APM32F402xx
+si SWD
+speed 4000
+connect
+loadfile output/APM32F402_GettingStarted.bin 0x08000000
+r
+g
+exit
